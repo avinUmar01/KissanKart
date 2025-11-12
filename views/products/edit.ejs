@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KissanKart</title>
+</head>
+<body>
+    <form method="POST" action="/products/<%= product._id %>?_method=PUT">
+        <input name="product[name]" value="<%=product.name%>" type="text">
+        <br><br>
+        <textarea name="product[description]" type="text"><%=product.description%></textarea>
+        <br><br>
+        <input name="product[image]" value="<%=product.image%>" type="text">
+        <br><br>
+        <input name="product[price]" value="<%=product.price%>" type="number">
+        <br><br>
+        <button>Add</button>
+        <br><br>
+    </form>
+</body>
+</html>
