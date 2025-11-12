@@ -53,11 +53,17 @@ app.put("/products/:id", async (req,res) =>{
     res.redirect("/products");
 })
 
+app.delete("/products/:id", async(req,res) =>{
+    let {id} = req.params;
+    await Product.findByIdAndDelete(id);
+    res.redirect("/products");
+})
+
 app.post("/products", async(req,res) =>{
     const newProduct = new Product(req.body.product);
     await newProduct.save();
     res.redirect("/products");
-})
+});
 
 app.listen(8080, () => {
     console.log("server is listening to server 8080");
