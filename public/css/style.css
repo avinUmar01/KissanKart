@@ -1,0 +1,27 @@
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .logo img{
+  height: 100px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.navbar {
+  height: 5rem;
+}
+
+.nav-link {
+  color: #222222 !important;
+  text-decoration: none;
+  transition: color 0.3s ease 2s, text-decoration-color 0.3s ease 2s;
+}
+
+.nav-link:hover {
+  color: #50c02f !important;
+}
+
+
+/* Home page */
